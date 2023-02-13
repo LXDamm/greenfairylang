@@ -1,5 +1,5 @@
-CC = gcc
-CFLAGS = -Wextra
+CC = clang
+CFLAGS = -Wextra -Wundef
 
 BUILD = ./build
 
@@ -8,6 +8,9 @@ C_FILES = src/main.c src/vm.c src/debug.c src/compiler.c src/scanner.c src/memor
 all: interpreter
 
 interpreter:
-	$(CC) -o $(BUILD)/$(@) $(C_FILES) $(CLAGS)
+	$(CC) -o $(BUILD)/$(@) $(C_FILES) $(CFLAGS)
+
+clean:
+	-rm -f $(BUILD)/interpreter
 
 

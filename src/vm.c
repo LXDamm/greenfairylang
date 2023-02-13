@@ -1,9 +1,9 @@
-#include <stdio.h>
-
+#include "vm.h"
 #include "common.h"
 #include "compiler.h"
 #include "debug.h"
-#include "vm.h"
+
+#include <stdio.h>
 
 VM vm;
 
